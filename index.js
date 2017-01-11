@@ -72,10 +72,10 @@ hbs.registerHelper('breadcrumbs', function (options) {
   return options.fn(out)
 })
 
-hbs.registerHelper('cleanPageTitle', function(context) {
-  var re = /([0-9][0-9] - )(.*)/;
-  var result = context.match(re);
-  return (result) ?  result[2] : context;
+hbs.registerHelper('cleanPageTitle', function (context) {
+  var re = /([0-9][0-9] - )(.*)/
+  var result = context.match(re)
+  return (result) ? result[2] : context
 })
 
 app.get('/', function (req, res) {
