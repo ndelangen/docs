@@ -11,7 +11,7 @@
     "build": "bin/build.sh",
     "pretest": "npm run build",
     "prestart": "npm run build",
-    "test": "standard --fix && standard public/js/main.js && mocha"
+    "test": "standard --fix public/js/main.js && mocha"
   },
   "repository": {
     "type": "git",

@@ -42,7 +42,7 @@ $(function () {
     main: t('<section><h2>Search Results</h2>{message}<ul class="pageColumns">{items}</ul></section>'),
     message: t('<div class="search-noresults">{body}</section>'),
     item: function (data) {
-      data.fullTitle = (data.subtitle || data.title).replace(/^\d*\s\-\s/, '')
+      data.fullTitle = (data.subtitle || data.title).replace(/^\d*\s-\s/, '')
       return templates._item(data)
     },
     _item: t('<li><a href="{href}">{fullTitle}</a></li>')
