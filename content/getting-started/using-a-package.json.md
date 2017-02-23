@@ -13,7 +13,7 @@ A `package.json` file affords you a lot of great things:
 1. It serves as documentation for what packages your project depends on.
 2. It allows you to specify the versions of a package that your project
 can use using [semantic versioning rules][1].
-3. Makes your build reproducable which means that its *way* easier
+3. Makes your build reproducible which means that its *way* easier
 to share with other developers.
 
 ## Requirements
@@ -45,7 +45,7 @@ To create a `package.json` run:
 > npm init
 ```
 
-This will initate a command line questionnaire that will conclude with the 
+This will initiate a command line questionnaire that will conclude with the 
 creation of a `package.json` in the directory you initiated the command.
 
 ### The `--yes` init flag
@@ -61,7 +61,7 @@ or `-y` flag:
 > npm init --yes
 ```
 
-This will ask you only one question, `author`. Otherwise it will fill in default
+This will not ask you any questions, and will fill in the default
 values: 
 
 ```
@@ -70,13 +70,14 @@ Wrote to /home/ag_dubs/my_package/package.json:
 
 {
   "name": "my_package",
+  "description": "",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "ag_dubs",
+  "author": "",
   "license": "ISC",
   "repository": {
     "type": "git",
@@ -90,12 +91,13 @@ Wrote to /home/ag_dubs/my_package/package.json:
 ```
 
 - `name`: defaults to author name unless in a `git` directory, in which case it
-    will be the name of the repository
+    will be the name of the directory
+- `description`: empty
 - `version`: always `1.0.0`
 - `main`: always `index.js`
 - `scripts`: by default creates a empty `test` script
 - `keywords`: empty
-- `author`: whatever you provided the CLI
+- `author`: empty
 - `license`: [`ISC`][2]
 - `repository`: will pull in info from the current directory, if present
 - `bugs`: will pull in info from the current directory, if present
